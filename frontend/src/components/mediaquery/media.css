@@ -53,9 +53,22 @@
    .create-job-title{
        font-size: 18px !important;
    }
+   .user{
+       width: 100%;
+       left: 100% !important;
+   }
+}
+
+@media screen and (max-width:400px){
+    .user{
+        left: 120% !important;
+    }
 }
 
 @media screen and (max-width:300px){
+    .user{
+        left: 170% !important;
+    }
 
     .buttons > button{
         margin: 0 !important;

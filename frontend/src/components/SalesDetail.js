@@ -63,8 +63,6 @@ const SalesDetail = () => {
                 carToUpdate.status = 'Available'
                 dispatch(setCarsData(cars))
                 dispatch(setCustomersData(customers))
-                // customersHandler.findAll().then(data => dispatch(setCustomersData(data)))
-                //update car status
             })
     }
     return (
@@ -74,7 +72,7 @@ const SalesDetail = () => {
                     <Loader />
                 ) :
                     (<>
-                        <h5 className="user align-self-center">{`${selectedCustomer.firstName} ${selectedCustomer.lastName}`}</h5>
+                        <h5 style={{position:'absolute',top:'12%',left:'50%',transform:'translateX(-50%)'}} className="user">{`${selectedCustomer.firstName} ${selectedCustomer.lastName}`}</h5>
                         <Table headers={['saleId', 'date', 'licensePlate', 'make', 'model', 'prize']} data={data} newPath={'/customers/sales/new'} removeEditButton handleDeleteWindow={handleDeleteWindow} />
                         <ConfirmDelete
                             isOpen={isOpen}

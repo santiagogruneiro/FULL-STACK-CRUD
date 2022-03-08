@@ -12,12 +12,6 @@ const Form = ({ fields, data, handleSend, create }) => {
 
     let navigate = useNavigate()
 
-    // useEffect(() => {
-    //     let timer = setTimeout(() => {
-    //         setLoading(false)
-    //     }, 700);
-    //     return () => clearTimeout(timer)
-    // }, [])
     const handleChange = ({ target: { value, name } }) => {
         // setNewData({...newData[0],[name]:value})
         const newObj = [{ ...newData[0], [name]: value }]
