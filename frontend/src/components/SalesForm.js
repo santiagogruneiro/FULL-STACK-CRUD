@@ -61,11 +61,11 @@ const SalesForm = () => {
     }
     return (
         <>
-            <p className="h3 align-self-center mb-5">{`Create a sale for ${selectedCustomer && selectedCustomer.firstName} ${selectedCustomer && selectedCustomer.lastName}`}</p>
-            <div style={{ height: '70vh' }} className="form-group w-75 d-flex align-self-center justify-content-around">
-                <div className='w-50'>
+            <p className="h3 create-job-title align-self-center mb-5">{`Create a sale for ${selectedCustomer && selectedCustomer.firstName} ${selectedCustomer && selectedCustomer.lastName}`}</p>
+            <div style={{ height: '70vh' }} className="form salesform form-group w-75 d-flex align-self-center justify-content-around">
+                <div className='enter-lp-container w-50'>
                     <label>Enter car's license plate</label>
-                    <input onFocus={handleSearch} onBlur={handleBlur}
+                    <input placeholder="Car's license plate" onFocus={handleSearch} onBlur={handleBlur}
                         onKeyDown={(e) => {
                             e.key === 'Backspace' && setSelectedSuggestion(null)
                             setSaleToCreate({ ...saleToCreate, car: '' })
@@ -76,7 +76,7 @@ const SalesForm = () => {
                             <span
                                 style={{ ...itemStyle, ...(hover.hovered && hover.item === e.licensePlate ? styleHover : null) }}
                                 value={e._id}
-                                className="item d-flex justify-content-start  px-3"
+                                className="suggestion-item d-flex justify-content-start px-3"
                                 onClick={() => handleSelectItem(e)}
                                 onMouseEnter={() => setHover({ hovered: true, item: e.licensePlate })}
                                 onMouseLeave={() => setHover(false)}

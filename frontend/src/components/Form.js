@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Loader from './Loader'
 import { useNavigate } from 'react-router-dom'
+import './mediaquery/media.css'
 const Form = ({ fields, data, handleSend, create }) => {
     const [loading, setLoading] = useState(true)
     const [newData, setNewData] = useState()
@@ -28,7 +29,7 @@ const Form = ({ fields, data, handleSend, create }) => {
             {loading ? (
                 <Loader loading={loading} />
             ) : (
-                <div className="form-group border rounded-3 p-5 d-flex flex-column justify-items-center align-items-center w-50 align-self-center">
+                <div className="form form-group border rounded-3 p-5 d-flex flex-column justify-items-center align-items-center w-50 align-self-center">
                     {
                         fields.map((field, index) => (
                             <>
@@ -53,9 +54,9 @@ const Form = ({ fields, data, handleSend, create }) => {
                             </>
                         ))
                     }
-                    <div className="buttons-container d-flex w-50 align-self-center">
-                        <button onClick={() => handleSend(newData[0], create)} className="btn btn-success w-50 mx-4 ">Send</button>
-                        <button onClick={() => navigate(-1)} className="btn btn-danger w-50  mx-4">Cancel</button>
+                    <div className="buttons-container d-flex w-75 align-self-center px-5 justify-content-around">
+                        <button onClick={() => handleSend(newData[0], create)} className="btn btn-success ">Send</button>
+                        <button onClick={() => navigate(-1)} className="btn btn-danger ">Cancel</button>
                     </div>
                 </div>
             )}

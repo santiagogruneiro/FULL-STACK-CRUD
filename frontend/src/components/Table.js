@@ -7,16 +7,16 @@ const Table = ({ headers, data, handleDeleteWindow, detailsPath, hasDetails, edi
 
     const [widthOverThousand,setWidthOverThousand] = React.useState(window.innerWidth > 1000)
 
-    useEffect(() => {
-        window.addEventListener('resize', handleResize)
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    })
-    const handleResize = () => {
-        if(window.innerWidth > 1000) setWidthOverThousand(true)
-        else setWidthOverThousand(false)
-    }
+    // useEffect(() => {
+    //     window.addEventListener('resize', handleResize)
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize)
+    //     }
+    // })
+    // const handleResize = () => {
+    //     if(window.innerWidth > 1000) setWidthOverThousand(true)
+    //     else setWidthOverThousand(false)
+    // }
     return (
         <>
             <div className="table-header d-flex  mb-3 justify-content-between ">

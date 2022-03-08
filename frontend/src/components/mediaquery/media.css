@@ -1,0 +1,76 @@
+@media screen and (max-width:1000px){
+    .form{
+        width: 70% !important;
+    }
+    .filter{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:700px){
+    .form{
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .buttons{
+        justify-content: flex-end !important;
+    }
+    .suggestions{
+        font-size: 11px;
+    }
+}
+
+
+@media screen and (max-width:500px){
+   .enter-lp-container > label{
+    display: none;
+   }
+   .enter-lp-container{
+       width: 75% !important;
+   }
+   .enter-lp-container > input{
+    margin-top: 15px;
+    width: 100% !important;
+   }
+   .buttons{
+       height: auto !important;
+       align-items: flex-end !important;
+       flex-direction: column !important;
+       justify-content: flex-start !important;
+       padding: 0 !important;
+       width: auto !important;
+   }
+   .buttons > button{
+       margin: 0 !important;
+       width: 50px !important;
+       font-size: 9px;
+       margin-bottom: 5px !important;
+   }
+   .salesform{
+       justify-content: space-between !important;
+   }
+   .create-job-title{
+       font-size: 18px !important;
+   }
+}
+
+@media screen and (max-width:300px){
+
+    .buttons > button{
+        margin: 0 !important;
+        width: 40px !important;
+        padding: 5px;
+        font-size: 9px;
+        margin-bottom: 9px !important;
+    }
+    .enter-lp-container {
+        width: 70% !important;
+    }
+    .suggestion-item{
+        padding: 0 !important;
+    }
+    .suggestions{
+        font-size: 9px;
+    }
+}
